@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>データベースの値が値が表示されているか確認しよう</title>
+<link rel="stylesheet" th:href="@{css/reset.css}" type="text/css">
+<link rel="stylesheet" th:href="@{css/sample002.css}" type="text/css">
+</head>
+<body>
+	<nav class="nav-container nav-color">
+		<p>SpringBootSample002(データベースの値を表にして表示する)</p>
+	</nav>
+	<div class="content-container">
+		<div class="content-wrap">
+		
+			<div class="space-padding text-center">
+				<span class="content-text">以下の項目にデータベースのinput_text_datasテーブルの値が表示されてましたら成功です。</span>
+				
+			</div>
+			<div class="space-padding">
+				<table>
+					<thead>
+						<th>id</th>
+						<th>input_text</th>
+					</thead>
+					<tbody>
+						<tr th:each="inputTextDatasBean : ${listInputTextDatasBean}">
+							<td th:text=${inputTextDatasBean.id}></td>
+							<td th:text=${inputTextDatasBean.textData}></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="space-padding">
+				<form class="form-wrap" th:action="@{/from}" method="GET">
+					<input type="submit" class="button-form" value="戻る"/>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

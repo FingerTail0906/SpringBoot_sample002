@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>データベースの値が値が表示されているか確認しよう</title>
+<link rel="stylesheet" th:href="@{css/reset.css}" type="text/css">
+<link rel="stylesheet" th:href="@{css/sample002.css}" type="text/css">
+</head>
+<body>
+	<nav class="nav-container nav-color">
+		<p>SpringBootSample002(データベースの値を表にして表示する)</p>
+	</nav>
+	<div class="content-container">
+		<div class="content-wrap">
+			<form class="form-wrap" th:action="@{/to}"  method="GET">
+				<div class="space-padding text-center">
+					<span class="content-text">以下のボタンをクリックし<br>次の画面でデータベースの値が表示されているか確認しよう。</span>
+					
+				</div>
+				<div class="space-padding">
+					<input type="submit" class="button-form" value="次の画面に"/>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
